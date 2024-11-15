@@ -376,14 +376,6 @@ var _ = Describe("Routes", func() {
 					},
 				},
 			},
-			{
-				Name: "ephemeral",
-				NetworkInterfaceSource: computev1alpha1.NetworkInterfaceSource{
-					NetworkInterfaceRef: &corev1.LocalObjectReference{
-						Name: fmt.Sprintf("%s-%s", machine.Name, "ephemeral"),
-					},
-				},
-			},
 		}
 		machine.Status.State = computev1alpha1.MachineStateRunning
 		machine.Status.NetworkInterfaces = []computev1alpha1.NetworkInterfaceStatus{
